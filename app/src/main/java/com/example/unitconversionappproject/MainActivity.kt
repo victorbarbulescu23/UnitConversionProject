@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var convertedOutput: TextView
 
     private val USDformatter = DecimalFormat("\u0024##,###.00")
-    val LeuFormatter = DecimalFormat("\u0141##,###.00")
+    private val LeuFormatter = DecimalFormat("\u0141##,###.00")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
