@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="277dp"
+        android:layout_height="84dp"
+        android:text="@string/usd_to_leu_converter"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <ImageView
+        android:id="@+id/us_flag"
+        android:layout_width="176dp"
+        android:layout_height="137dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="36dp"
+        android:contentDescription="@string/us_flag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/romanian_flag"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/usflag" />
+
+    <ImageView
+        android:id="@+id/romanian_flag"
+        android:layout_width="172dp"
+        android:layout_height="111dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="48dp"
+        android:contentDescription="@string/romanian_flag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/romanianflag" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="175dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="89dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <RadioButton
+            android:id="@+id/usd_to_leu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2196F3"
+            android:text="@string/usd_to_leu"
+            android:textColorLink="#2196F3"
+            app:useMaterialThemeColors="false" />
+
+        <RadioButton
+            android:id="@+id/leu_to_usd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F44336"
+            android:hapticFeedbackEnabled="true"
+            android:text="@string/leu_to_usd"
+            android:textColorLink="#F44336" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/currency_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="103dp"
+        android:ems="10"
+        android:hint="@string/enter_your_amount"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <TextView
+        android:id="@+id/converted_output"
+        android:layout_width="203dp"
+        android:layout_height="76dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/us_flag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/convert_button"
+        tools:text="Converted currency amount appears here. Press the Convert button to convert" />
+
+    <Button
+        android:id="@+id/convert_button"
+        android:layout_width="119dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="146dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="146dp"
+        android:backgroundTint="#1F3CCC"
+        android:hapticFeedbackEnabled="true"
+        android:text="@string/convert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_input" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

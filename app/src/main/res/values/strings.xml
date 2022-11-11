@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Unit Conversion App Project</string>
+    <string name="usd_to_leu_converter">USD To Leu Converter!</string>
+    <string name="usd_to_leu">USD to Leu</string>
+    <string name="leu_to_usd">Leu to USD</string>
+    <string name="us_flag">US Flag</string>
+    <string name="romanian_flag">Romanian Flag</string>
+    <string name="enter_your_amount">enter your amount</string>
+    <string name="convert">Convert</string>
+</resources>
